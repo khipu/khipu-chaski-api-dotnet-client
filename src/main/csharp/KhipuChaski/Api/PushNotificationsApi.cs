@@ -24,7 +24,7 @@ namespace KhipuChaski.Api
         /// <param name="subject">Asunto del mensaje</param>
         /// <param name="body">cuerpo del mensaje</param>
         /// <returns>SuccessResponse</returns>
-        SuccessResponse MsgPost (string recipientIdSet, string subject, string body);
+        SuccessResponse SendMsg (string recipientIdSet, string subject, string body);
   
         /// <summary>
         /// Enviar un nuevo mensaje
@@ -36,7 +36,7 @@ namespace KhipuChaski.Api
         /// <param name="subject">Asunto del mensaje</param>
         /// <param name="body">cuerpo del mensaje</param>
         /// <returns>SuccessResponse</returns>
-        System.Threading.Tasks.Task<SuccessResponse> MsgPostAsync (string recipientIdSet, string subject, string body);
+        System.Threading.Tasks.Task<SuccessResponse> SendMsgAsync (string recipientIdSet, string subject, string body);
         
     }
   
@@ -100,17 +100,17 @@ namespace KhipuChaski.Api
         /// <param name="subject">Asunto del mensaje</param> 
         /// <param name="body">cuerpo del mensaje</param> 
         /// <returns>SuccessResponse</returns>            
-        public SuccessResponse MsgPost (string recipientIdSet, string subject, string body)
+        public SuccessResponse SendMsg (string recipientIdSet, string subject, string body)
         {
             
             // verify the required parameter 'recipientIdSet' is set
-            if (recipientIdSet == null) throw new ApiException(400, "Missing required parameter 'recipientIdSet' when calling MsgPost");
+            if (recipientIdSet == null) throw new ApiException(400, "Missing required parameter 'recipientIdSet' when calling SendMsg");
             
             // verify the required parameter 'subject' is set
-            if (subject == null) throw new ApiException(400, "Missing required parameter 'subject' when calling MsgPost");
+            if (subject == null) throw new ApiException(400, "Missing required parameter 'subject' when calling SendMsg");
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling MsgPost");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling SendMsg");
             
     
             var path = "/msg";
@@ -149,9 +149,9 @@ namespace KhipuChaski.Api
             IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
     
             if (((int)response.StatusCode) >= 400)
-                throw new ApiException ((int)response.StatusCode, "Error calling MsgPost: " + response.Content, response.Content);
+                throw new ApiException ((int)response.StatusCode, "Error calling SendMsg: " + response.Content, response.Content);
             else if (((int)response.StatusCode) == 0)
-                throw new ApiException ((int)response.StatusCode, "Error calling MsgPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException ((int)response.StatusCode, "Error calling SendMsg: " + response.ErrorMessage, response.ErrorMessage);
     
             return (SuccessResponse) ApiClient.Deserialize(response.Content, typeof(SuccessResponse), response.Headers);
         }
@@ -163,14 +163,14 @@ namespace KhipuChaski.Api
         /// <param name="subject">Asunto del mensaje</param>
         /// <param name="body">cuerpo del mensaje</param>
         /// <returns>SuccessResponse</returns>
-        public async System.Threading.Tasks.Task<SuccessResponse> MsgPostAsync (string recipientIdSet, string subject, string body)
+        public async System.Threading.Tasks.Task<SuccessResponse> SendMsgAsync (string recipientIdSet, string subject, string body)
         {
             // verify the required parameter 'recipientIdSet' is set
-            if (recipientIdSet == null) throw new ApiException(400, "Missing required parameter 'recipientIdSet' when calling MsgPost");
+            if (recipientIdSet == null) throw new ApiException(400, "Missing required parameter 'recipientIdSet' when calling SendMsg");
             // verify the required parameter 'subject' is set
-            if (subject == null) throw new ApiException(400, "Missing required parameter 'subject' when calling MsgPost");
+            if (subject == null) throw new ApiException(400, "Missing required parameter 'subject' when calling SendMsg");
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling MsgPost");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling SendMsg");
             
     
             var path = "/msg";
@@ -208,7 +208,7 @@ namespace KhipuChaski.Api
             // make the HTTP request
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
             if (((int)response.StatusCode) >= 400)
-                throw new ApiException ((int)response.StatusCode, "Error calling MsgPost: " + response.Content, response.Content);
+                throw new ApiException ((int)response.StatusCode, "Error calling SendMsg: " + response.Content, response.Content);
 
             return (SuccessResponse) ApiClient.Deserialize(response.Content, typeof(SuccessResponse), response.Headers);
         }

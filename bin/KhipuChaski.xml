@@ -4,12 +4,190 @@
         <name>KhipuChaski</name>
     </assembly>
     <members>
+        <member name="T:KhipuChaski.Api.IRecipientRegistryListApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary>
+        </member>
+        <member name="M:KhipuChaski.Api.IRecipientRegistryListApi.GetRecipients">
+            <summary>
+            Lista de receptores de asociados a la aplicacion
+            </summary>
+            <remarks>
+            Obtiene la lista de receptores asociados a la aplicacion
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:KhipuChaski.Api.IRecipientRegistryListApi.GetRecipientsAsync">
+            <summary>
+            Lista de receptores de asociados a la aplicacion
+            </summary>
+            <remarks>
+            Obtiene la lista de receptores asociados a la aplicacion
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:KhipuChaski.Api.RecipientRegistryListApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary>
+        </member>
+        <member name="M:KhipuChaski.Api.RecipientRegistryListApi.#ctor(KhipuChaski.Client.ApiClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:KhipuChaski.Api.RecipientRegistryListApi"/> class.
+            </summary>
+            <param name="apiClient"> an instance of ApiClient (optional)</param>
+            <returns></returns>
+        </member>
+        <member name="M:KhipuChaski.Api.RecipientRegistryListApi.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:KhipuChaski.Api.RecipientRegistryListApi"/> class.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KhipuChaski.Api.RecipientRegistryListApi.SetBasePath(System.String)">
+            <summary>
+            Sets the base path of the API client.
+            </summary>
+            <param name="basePath">The base path</param>
+            <value>The base path</value>
+        </member>
+        <member name="M:KhipuChaski.Api.RecipientRegistryListApi.GetBasePath">
+            <summary>
+            Gets the base path of the API client.
+            </summary>
+            <value>The base path</value>
+        </member>
+        <member name="M:KhipuChaski.Api.RecipientRegistryListApi.GetRecipients">
+            <summary>
+            Lista de receptores de asociados a la aplicacion Obtiene la lista de receptores asociados a la aplicacion
+            </summary>
+            <returns></returns>            
+        </member>
+        <member name="M:KhipuChaski.Api.RecipientRegistryListApi.GetRecipientsAsync">
+            <summary>
+            Lista de receptores de asociados a la aplicacion Obtiene la lista de receptores asociados a la aplicacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:KhipuChaski.Api.RecipientRegistryListApi.ApiClient">
+            <summary>
+            Gets or sets the API client.
+            </summary>
+            <value>An instance of the ApiClient</value>
+        </member>
+        <member name="T:KhipuChaski.Api.IDeviceRegistryListApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary>
+        </member>
+        <member name="M:KhipuChaski.Api.IDeviceRegistryListApi.GetDevices">
+            <summary>
+            Lista de dispositivos
+            </summary>
+            <remarks>
+            Obtiene la lista de dispositivos registrados
+            </remarks>
+            <returns>DeviceList</returns>
+        </member>
+        <member name="M:KhipuChaski.Api.IDeviceRegistryListApi.GetDevicesAsync">
+            <summary>
+            Lista de dispositivos
+            </summary>
+            <remarks>
+            Obtiene la lista de dispositivos registrados
+            </remarks>
+            <returns>DeviceList</returns>
+        </member>
+        <member name="M:KhipuChaski.Api.IDeviceRegistryListApi.GetRecipientDevices(System.String)">
+            <summary>
+            Lista de dispositivos asociados a un id de receptor
+            </summary>
+            <remarks>
+            Obtiene la lista de dispositivos asociados a un receptor
+            </remarks>
+            <param name="recipientId">Identificador asociado a un receptor de mensajes push</param>
+            <returns>DeviceList</returns>
+        </member>
+        <member name="M:KhipuChaski.Api.IDeviceRegistryListApi.GetRecipientDevicesAsync(System.String)">
+            <summary>
+            Lista de dispositivos asociados a un id de receptor
+            </summary>
+            <remarks>
+            Obtiene la lista de dispositivos asociados a un receptor
+            </remarks>
+            <param name="recipientId">Identificador asociado a un receptor de mensajes push</param>
+            <returns>DeviceList</returns>
+        </member>
+        <member name="T:KhipuChaski.Api.DeviceRegistryListApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary>
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryListApi.#ctor(KhipuChaski.Client.ApiClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:KhipuChaski.Api.DeviceRegistryListApi"/> class.
+            </summary>
+            <param name="apiClient"> an instance of ApiClient (optional)</param>
+            <returns></returns>
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryListApi.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:KhipuChaski.Api.DeviceRegistryListApi"/> class.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryListApi.SetBasePath(System.String)">
+            <summary>
+            Sets the base path of the API client.
+            </summary>
+            <param name="basePath">The base path</param>
+            <value>The base path</value>
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryListApi.GetBasePath">
+            <summary>
+            Gets the base path of the API client.
+            </summary>
+            <value>The base path</value>
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryListApi.GetDevices">
+            <summary>
+            Lista de dispositivos Obtiene la lista de dispositivos registrados
+            </summary>
+            <returns>DeviceList</returns>            
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryListApi.GetDevicesAsync">
+            <summary>
+            Lista de dispositivos Obtiene la lista de dispositivos registrados
+            </summary>
+            <returns>DeviceList</returns>
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryListApi.GetRecipientDevices(System.String)">
+            <summary>
+            Lista de dispositivos asociados a un id de receptor Obtiene la lista de dispositivos asociados a un receptor
+            </summary>
+            <param name="recipientId">Identificador asociado a un receptor de mensajes push</param> 
+            <returns>DeviceList</returns>            
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryListApi.GetRecipientDevicesAsync(System.String)">
+            <summary>
+            Lista de dispositivos asociados a un id de receptor Obtiene la lista de dispositivos asociados a un receptor
+            </summary>
+            <param name="recipientId">Identificador asociado a un receptor de mensajes push</param>
+            <returns>DeviceList</returns>
+        </member>
+        <member name="P:KhipuChaski.Api.DeviceRegistryListApi.ApiClient">
+            <summary>
+            Gets or sets the API client.
+            </summary>
+            <value>An instance of the ApiClient</value>
+        </member>
         <member name="T:KhipuChaski.Api.IPushNotificationsApi">
             <summary>
             Represents a collection of functions to interact with the API endpoints
             </summary>
         </member>
-        <member name="M:KhipuChaski.Api.IPushNotificationsApi.MsgPost(System.String,System.String,System.String)">
+        <member name="M:KhipuChaski.Api.IPushNotificationsApi.SendMsg(System.String,System.String,System.String)">
             <summary>
             Enviar un nuevo mensaje
             </summary>
@@ -21,7 +199,7 @@
             <param name="body">cuerpo del mensaje</param>
             <returns>SuccessResponse</returns>
         </member>
-        <member name="M:KhipuChaski.Api.IPushNotificationsApi.MsgPostAsync(System.String,System.String,System.String)">
+        <member name="M:KhipuChaski.Api.IPushNotificationsApi.SendMsgAsync(System.String,System.String,System.String)">
             <summary>
             Enviar un nuevo mensaje
             </summary>
@@ -64,7 +242,7 @@
             </summary>
             <value>The base path</value>
         </member>
-        <member name="M:KhipuChaski.Api.PushNotificationsApi.MsgPost(System.String,System.String,System.String)">
+        <member name="M:KhipuChaski.Api.PushNotificationsApi.SendMsg(System.String,System.String,System.String)">
             <summary>
             Enviar un nuevo mensaje Encolar un nuevo mensaje para dispositivos moviles.
             </summary>
@@ -73,7 +251,7 @@
             <param name="body">cuerpo del mensaje</param> 
             <returns>SuccessResponse</returns>            
         </member>
-        <member name="M:KhipuChaski.Api.PushNotificationsApi.MsgPostAsync(System.String,System.String,System.String)">
+        <member name="M:KhipuChaski.Api.PushNotificationsApi.SendMsgAsync(System.String,System.String,System.String)">
             <summary>
             Enviar un nuevo mensaje Encolar un nuevo mensaje para dispositivos moviles.
             </summary>
@@ -83,6 +261,192 @@
             <returns>SuccessResponse</returns>
         </member>
         <member name="P:KhipuChaski.Api.PushNotificationsApi.ApiClient">
+            <summary>
+            Gets or sets the API client.
+            </summary>
+            <value>An instance of the ApiClient</value>
+        </member>
+        <member name="T:KhipuChaski.Api.IDeviceRegistryApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary>
+        </member>
+        <member name="M:KhipuChaski.Api.IDeviceRegistryApi.AddDevice(KhipuChaski.Model.Device)">
+            <summary>
+            Registro de dispositivo
+            </summary>
+            <remarks>
+            Registra un dispositivo identificado por su tokenId
+            </remarks>
+            <param name="device">Dispositivo a registrar</param>
+            <returns>SuccessResponse</returns>
+        </member>
+        <member name="M:KhipuChaski.Api.IDeviceRegistryApi.AddDeviceAsync(KhipuChaski.Model.Device)">
+            <summary>
+            Registro de dispositivo
+            </summary>
+            <remarks>
+            Registra un dispositivo identificado por su tokenId
+            </remarks>
+            <param name="device">Dispositivo a registrar</param>
+            <returns>SuccessResponse</returns>
+        </member>
+        <member name="M:KhipuChaski.Api.IDeviceRegistryApi.GetDevice(System.String)">
+            <summary>
+            Obtiene dispositivo
+            </summary>
+            <remarks>
+            Obtiene la informacion de un dispositivo especifico
+            </remarks>
+            <param name="tokenId">Token que identifica al dispositivo. Tiene la forma &lt;platform&gt;:&lt;registryId&gt;, donde platform puede tomar los valores \&quot;and\&quot; o \&quot;ios\&quot;.</param>
+            <returns>Device</returns>
+        </member>
+        <member name="M:KhipuChaski.Api.IDeviceRegistryApi.GetDeviceAsync(System.String)">
+            <summary>
+            Obtiene dispositivo
+            </summary>
+            <remarks>
+            Obtiene la informacion de un dispositivo especifico
+            </remarks>
+            <param name="tokenId">Token que identifica al dispositivo. Tiene la forma &lt;platform&gt;:&lt;registryId&gt;, donde platform puede tomar los valores \&quot;and\&quot; o \&quot;ios\&quot;.</param>
+            <returns>Device</returns>
+        </member>
+        <member name="M:KhipuChaski.Api.IDeviceRegistryApi.AddDeviceRecipient(System.String,System.String)">
+            <summary>
+            Agregar receptor
+            </summary>
+            <remarks>
+            Agregar receptor de un dispositivo especifico
+            </remarks>
+            <param name="tokenId">Token que identifica al dispositivo. Tiene la forma &lt;platform&gt;:&lt;registryId&gt;, donde platform puede tomar los valores \&quot;and\&quot; o \&quot;ios\&quot;.</param>
+            <param name="recipientId">Identificador asociado a un receptor de mensajes push</param>
+            <returns>SuccessResponse</returns>
+        </member>
+        <member name="M:KhipuChaski.Api.IDeviceRegistryApi.AddDeviceRecipientAsync(System.String,System.String)">
+            <summary>
+            Agregar receptor
+            </summary>
+            <remarks>
+            Agregar receptor de un dispositivo especifico
+            </remarks>
+            <param name="tokenId">Token que identifica al dispositivo. Tiene la forma &lt;platform&gt;:&lt;registryId&gt;, donde platform puede tomar los valores \&quot;and\&quot; o \&quot;ios\&quot;.</param>
+            <param name="recipientId">Identificador asociado a un receptor de mensajes push</param>
+            <returns>SuccessResponse</returns>
+        </member>
+        <member name="M:KhipuChaski.Api.IDeviceRegistryApi.RemoveDeviceRecipient(System.String,System.String)">
+            <summary>
+            Elimina receptor
+            </summary>
+            <remarks>
+            Elimina receptor de un dispositivo especifico
+            </remarks>
+            <param name="tokenId">Token que identifica al dispositivo. Tiene la forma &lt;platform&gt;:&lt;registryId&gt;, donde platform puede tomar los valores \&quot;and\&quot; o \&quot;ios\&quot;.</param>
+            <param name="recipientId">Identificador asociado a un receptor de mensajes push</param>
+            <returns>SuccessResponse</returns>
+        </member>
+        <member name="M:KhipuChaski.Api.IDeviceRegistryApi.RemoveDeviceRecipientAsync(System.String,System.String)">
+            <summary>
+            Elimina receptor
+            </summary>
+            <remarks>
+            Elimina receptor de un dispositivo especifico
+            </remarks>
+            <param name="tokenId">Token que identifica al dispositivo. Tiene la forma &lt;platform&gt;:&lt;registryId&gt;, donde platform puede tomar los valores \&quot;and\&quot; o \&quot;ios\&quot;.</param>
+            <param name="recipientId">Identificador asociado a un receptor de mensajes push</param>
+            <returns>SuccessResponse</returns>
+        </member>
+        <member name="T:KhipuChaski.Api.DeviceRegistryApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary>
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryApi.#ctor(KhipuChaski.Client.ApiClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:KhipuChaski.Api.DeviceRegistryApi"/> class.
+            </summary>
+            <param name="apiClient"> an instance of ApiClient (optional)</param>
+            <returns></returns>
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryApi.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:KhipuChaski.Api.DeviceRegistryApi"/> class.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryApi.SetBasePath(System.String)">
+            <summary>
+            Sets the base path of the API client.
+            </summary>
+            <param name="basePath">The base path</param>
+            <value>The base path</value>
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryApi.GetBasePath">
+            <summary>
+            Gets the base path of the API client.
+            </summary>
+            <value>The base path</value>
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryApi.AddDevice(KhipuChaski.Model.Device)">
+            <summary>
+            Registro de dispositivo Registra un dispositivo identificado por su tokenId
+            </summary>
+            <param name="device">Dispositivo a registrar</param> 
+            <returns>SuccessResponse</returns>            
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryApi.AddDeviceAsync(KhipuChaski.Model.Device)">
+            <summary>
+            Registro de dispositivo Registra un dispositivo identificado por su tokenId
+            </summary>
+            <param name="device">Dispositivo a registrar</param>
+            <returns>SuccessResponse</returns>
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryApi.GetDevice(System.String)">
+            <summary>
+            Obtiene dispositivo Obtiene la informacion de un dispositivo especifico
+            </summary>
+            <param name="tokenId">Token que identifica al dispositivo. Tiene la forma &lt;platform&gt;:&lt;registryId&gt;, donde platform puede tomar los valores \&quot;and\&quot; o \&quot;ios\&quot;.</param> 
+            <returns>Device</returns>            
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryApi.GetDeviceAsync(System.String)">
+            <summary>
+            Obtiene dispositivo Obtiene la informacion de un dispositivo especifico
+            </summary>
+            <param name="tokenId">Token que identifica al dispositivo. Tiene la forma &lt;platform&gt;:&lt;registryId&gt;, donde platform puede tomar los valores \&quot;and\&quot; o \&quot;ios\&quot;.</param>
+            <returns>Device</returns>
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryApi.AddDeviceRecipient(System.String,System.String)">
+            <summary>
+            Agregar receptor Agregar receptor de un dispositivo especifico
+            </summary>
+            <param name="tokenId">Token que identifica al dispositivo. Tiene la forma &lt;platform&gt;:&lt;registryId&gt;, donde platform puede tomar los valores \&quot;and\&quot; o \&quot;ios\&quot;.</param> 
+            <param name="recipientId">Identificador asociado a un receptor de mensajes push</param> 
+            <returns>SuccessResponse</returns>            
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryApi.AddDeviceRecipientAsync(System.String,System.String)">
+            <summary>
+            Agregar receptor Agregar receptor de un dispositivo especifico
+            </summary>
+            <param name="tokenId">Token que identifica al dispositivo. Tiene la forma &lt;platform&gt;:&lt;registryId&gt;, donde platform puede tomar los valores \&quot;and\&quot; o \&quot;ios\&quot;.</param>
+            <param name="recipientId">Identificador asociado a un receptor de mensajes push</param>
+            <returns>SuccessResponse</returns>
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryApi.RemoveDeviceRecipient(System.String,System.String)">
+            <summary>
+            Elimina receptor Elimina receptor de un dispositivo especifico
+            </summary>
+            <param name="tokenId">Token que identifica al dispositivo. Tiene la forma &lt;platform&gt;:&lt;registryId&gt;, donde platform puede tomar los valores \&quot;and\&quot; o \&quot;ios\&quot;.</param> 
+            <param name="recipientId">Identificador asociado a un receptor de mensajes push</param> 
+            <returns>SuccessResponse</returns>            
+        </member>
+        <member name="M:KhipuChaski.Api.DeviceRegistryApi.RemoveDeviceRecipientAsync(System.String,System.String)">
+            <summary>
+            Elimina receptor Elimina receptor de un dispositivo especifico
+            </summary>
+            <param name="tokenId">Token que identifica al dispositivo. Tiene la forma &lt;platform&gt;:&lt;registryId&gt;, donde platform puede tomar los valores \&quot;and\&quot; o \&quot;ios\&quot;.</param>
+            <param name="recipientId">Identificador asociado a un receptor de mensajes push</param>
+            <returns>SuccessResponse</returns>
+        </member>
+        <member name="P:KhipuChaski.Api.DeviceRegistryApi.ApiClient">
             <summary>
             Gets or sets the API client.
             </summary>
@@ -124,6 +488,36 @@
             Gets or sets the error content (body json object)
             </summary>
             <value>The error content (Http response body).</value>
+        </member>
+        <member name="T:KhipuChaski.Client.CanonicalJsonConverter">
+            <summary>
+            Convert an object to a canonical json ( with attributes sorted alphabetically)
+            </summary>
+        </member>
+        <member name="M:KhipuChaski.Client.CanonicalJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Get a JsonToken from object and sort properties alphabetically
+            </summary>
+        </member>
+        <member name="M:KhipuChaski.Client.CanonicalJsonConverter.sortProperties(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Sort properties alphabetically
+            </summary>
+        </member>
+        <member name="M:KhipuChaski.Client.CanonicalJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Not implemented
+            </summary>
+        </member>
+        <member name="M:KhipuChaski.Client.CanonicalJsonConverter.CanConvert(System.Type)">
+            <summary>
+            Enabled to convert any objectType
+            </summary>
+        </member>
+        <member name="P:KhipuChaski.Client.CanonicalJsonConverter.CanRead">
+            <summary>
+            Is just a writer class read mode is disabled
+            </summary>
         </member>
         <member name="T:KhipuChaski.Client.ApiClient">
             <summary>
@@ -228,7 +622,7 @@
             <param name="secret">Secret.</param>
             <param name="data">Data.</param>
         </member>
-        <member name="M:KhipuChaski.Client.ApiClient.AuthHeader(System.String,RestSharp.Method,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String})">
+        <member name="M:KhipuChaski.Client.ApiClient.AuthHeader(System.String,RestSharp.Method,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
             <summary>
             Calculates the khipu auth header value
             </summary>
@@ -236,8 +630,9 @@
             <param name="method">Request method.</param>
             <param name="queryParams">Query parameters.</param>
             <param name="formParams">Form parameters.</param>
+            <param name="postBody">HTTP body (POST request).</param>
         </member>
-        <member name="M:KhipuChaski.Client.ApiClient.UpdateParamsForAuth(System.String,RestSharp.Method,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.String[])">
+        <member name="M:KhipuChaski.Client.ApiClient.UpdateParamsForAuth(System.String,RestSharp.Method,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.String[],System.String)">
             <summary>
             Update parameters based on authentication.
             </summary>
@@ -247,6 +642,7 @@
             <param name="headerParams">Header parameters.</param>
             <param name="formParams">Form parameters.</param>
             <param name="authSettings">Authentication settings.</param>
+            <param name="postBody">HTTP body (POST request).</param>
         </member>
         <member name="M:KhipuChaski.Client.ApiClient.SelectHeaderAccept(System.String[])">
             <summary>
@@ -416,6 +812,23 @@
             </summary>
             <value>Mensaje del error</value>
         </member>
+        <member name="T:KhipuChaski.Model.DeviceList">
+            <summary>
+            Lista de dispositivos
+            </summary>
+        </member>
+        <member name="M:KhipuChaski.Model.DeviceList.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:KhipuChaski.Model.DeviceList.ToJson">
+            <summary>
+            Get the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
         <member name="T:KhipuChaski.Model.AuthorizationError">
             <summary>
             
@@ -444,6 +857,36 @@
             Mensaje del error
             </summary>
             <value>Mensaje del error</value>
+        </member>
+        <member name="T:KhipuChaski.Model.Device">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:KhipuChaski.Model.Device.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:KhipuChaski.Model.Device.ToJson">
+            <summary>
+            Get the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:KhipuChaski.Model.Device.TokenId" -->
+        <member name="P:KhipuChaski.Model.Device.Recipients">
+            <summary>
+            Lista de receptores asociados al dispositivo
+            </summary>
+            <value>Lista de receptores asociados al dispositivo</value>
+        </member>
+        <member name="P:KhipuChaski.Model.Device.ExtraData">
+            <summary>
+            informacion adicional del dispositivo
+            </summary>
+            <value>informacion adicional del dispositivo</value>
         </member>
     </members>
 </doc>
