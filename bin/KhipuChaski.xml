@@ -187,6 +187,26 @@
             Represents a collection of functions to interact with the API endpoints
             </summary>
         </member>
+        <member name="M:KhipuChaski.Api.IPushNotificationsApi.SendMessage(KhipuChaski.Model.Message)">
+            <summary>
+            Enviar un nuevo mensaje
+            </summary>
+            <remarks>
+            Encolar un nuevo mensaje para dispositivos moviles.
+            </remarks>
+            <param name="message">Mensaje a enviar</param>
+            <returns>SuccessResponse</returns>
+        </member>
+        <member name="M:KhipuChaski.Api.IPushNotificationsApi.SendMessageAsync(KhipuChaski.Model.Message)">
+            <summary>
+            Enviar un nuevo mensaje
+            </summary>
+            <remarks>
+            Encolar un nuevo mensaje para dispositivos moviles.
+            </remarks>
+            <param name="message">Mensaje a enviar</param>
+            <returns>SuccessResponse</returns>
+        </member>
         <member name="M:KhipuChaski.Api.IPushNotificationsApi.SendMsg(System.String,System.String,System.String)">
             <summary>
             Enviar un nuevo mensaje
@@ -194,7 +214,7 @@
             <remarks>
             Encolar un nuevo mensaje para dispositivos moviles.
             </remarks>
-            <param name="recipientIdSet">Receptores del mensaje</param>
+            <param name="recipientIdSet">Receptores del mensaje. Los ids de receptor van separados por coma.</param>
             <param name="subject">Asunto del mensaje</param>
             <param name="body">cuerpo del mensaje</param>
             <returns>SuccessResponse</returns>
@@ -206,7 +226,7 @@
             <remarks>
             Encolar un nuevo mensaje para dispositivos moviles.
             </remarks>
-            <param name="recipientIdSet">Receptores del mensaje</param>
+            <param name="recipientIdSet">Receptores del mensaje. Los ids de receptor van separados por coma.</param>
             <param name="subject">Asunto del mensaje</param>
             <param name="body">cuerpo del mensaje</param>
             <returns>SuccessResponse</returns>
@@ -242,11 +262,25 @@
             </summary>
             <value>The base path</value>
         </member>
+        <member name="M:KhipuChaski.Api.PushNotificationsApi.SendMessage(KhipuChaski.Model.Message)">
+            <summary>
+            Enviar un nuevo mensaje Encolar un nuevo mensaje para dispositivos moviles.
+            </summary>
+            <param name="message">Mensaje a enviar</param> 
+            <returns>SuccessResponse</returns>            
+        </member>
+        <member name="M:KhipuChaski.Api.PushNotificationsApi.SendMessageAsync(KhipuChaski.Model.Message)">
+            <summary>
+            Enviar un nuevo mensaje Encolar un nuevo mensaje para dispositivos moviles.
+            </summary>
+            <param name="message">Mensaje a enviar</param>
+            <returns>SuccessResponse</returns>
+        </member>
         <member name="M:KhipuChaski.Api.PushNotificationsApi.SendMsg(System.String,System.String,System.String)">
             <summary>
             Enviar un nuevo mensaje Encolar un nuevo mensaje para dispositivos moviles.
             </summary>
-            <param name="recipientIdSet">Receptores del mensaje</param> 
+            <param name="recipientIdSet">Receptores del mensaje. Los ids de receptor van separados por coma.</param> 
             <param name="subject">Asunto del mensaje</param> 
             <param name="body">cuerpo del mensaje</param> 
             <returns>SuccessResponse</returns>            
@@ -255,7 +289,7 @@
             <summary>
             Enviar un nuevo mensaje Encolar un nuevo mensaje para dispositivos moviles.
             </summary>
-            <param name="recipientIdSet">Receptores del mensaje</param>
+            <param name="recipientIdSet">Receptores del mensaje. Los ids de receptor van separados por coma.</param>
             <param name="subject">Asunto del mensaje</param>
             <param name="body">cuerpo del mensaje</param>
             <returns>SuccessResponse</returns>
@@ -829,6 +863,35 @@
             </summary>
             <returns>JSON string presentation of the object</returns>
         </member>
+        <member name="T:KhipuChaski.Model.MsgProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:KhipuChaski.Model.MsgProperty.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:KhipuChaski.Model.MsgProperty.ToJson">
+            <summary>
+            Get the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="P:KhipuChaski.Model.MsgProperty.Key">
+            <summary>
+            nombre de la propiedad
+            </summary>
+            <value>nombre de la propiedad</value>
+        </member>
+        <member name="P:KhipuChaski.Model.MsgProperty.Value">
+            <summary>
+            valor de la propiedad
+            </summary>
+            <value>valor de la propiedad</value>
+        </member>
         <member name="T:KhipuChaski.Model.AuthorizationError">
             <summary>
             
@@ -887,6 +950,47 @@
             informacion adicional del dispositivo
             </summary>
             <value>informacion adicional del dispositivo</value>
+        </member>
+        <member name="T:KhipuChaski.Model.Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:KhipuChaski.Model.Message.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:KhipuChaski.Model.Message.ToJson">
+            <summary>
+            Get the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="P:KhipuChaski.Model.Message.Subject">
+            <summary>
+            Asunto de mensaje
+            </summary>
+            <value>Asunto de mensaje</value>
+        </member>
+        <member name="P:KhipuChaski.Model.Message.RecipientIdSet">
+            <summary>
+            Lista de identificadores de receptores del mensaje
+            </summary>
+            <value>Lista de identificadores de receptores del mensaje</value>
+        </member>
+        <member name="P:KhipuChaski.Model.Message.Body">
+            <summary>
+            Cuerpo del mensaje
+            </summary>
+            <value>Cuerpo del mensaje</value>
+        </member>
+        <member name="P:KhipuChaski.Model.Message.MsgProperties">
+            <summary>
+            Lista de propiedades del mensaje
+            </summary>
+            <value>Lista de propiedades del mensaje</value>
         </member>
     </members>
 </doc>
