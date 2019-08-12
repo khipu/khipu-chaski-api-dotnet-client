@@ -27,7 +27,7 @@ namespace KhipuChaski.Client
         /// Initializes a new instance of the <see cref="ApiClient" /> class.
         /// </summary>
         /// <param name="basePath">The base path.</param>
-        public ApiClient(String basePath="https://khipu.com/chaski/api/1.0")
+        public ApiClient(String basePath="https://chaski.khipu.com/api/1.0")
         {
             BasePath = basePath;
             RestClient = new RestClient(BasePath);
