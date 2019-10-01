@@ -35,6 +35,26 @@ namespace KhipuChaski.Api
         System.Threading.Tasks.Task<SuccessResponse> AddDeviceAsync (Device device);
         
         /// <summary>
+        /// Registro de dispositivo eliminando alias anteriores
+        /// </summary>
+        /// <remarks>
+        /// Registra un dispositivo identificado por su tokenId, elimina alias anteriores
+        /// </remarks>
+        /// <param name="device">Dispositivo a registrar</param>
+        /// <returns>SuccessResponse</returns>
+        SuccessResponse AddUniqueAliasDevice (Device device);
+  
+        /// <summary>
+        /// Registro de dispositivo eliminando alias anteriores
+        /// </summary>
+        /// <remarks>
+        /// Registra un dispositivo identificado por su tokenId, elimina alias anteriores
+        /// </remarks>
+        /// <param name="device">Dispositivo a registrar</param>
+        /// <returns>SuccessResponse</returns>
+        System.Threading.Tasks.Task<SuccessResponse> AddUniqueAliasDeviceAsync (Device device);
+        
+        /// <summary>
         /// Obtiene dispositivo
         /// </summary>
         /// <remarks>
@@ -251,6 +271,108 @@ namespace KhipuChaski.Api
             IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
             if (((int)response.StatusCode) >= 400)
                 throw new ApiException ((int)response.StatusCode, "Error calling AddDevice: " + response.Content, response.Content);
+
+            return (SuccessResponse) ApiClient.Deserialize(response.Content, typeof(SuccessResponse), response.Headers);
+        }
+        
+        /// <summary>
+        /// Registro de dispositivo eliminando alias anteriores Registra un dispositivo identificado por su tokenId, elimina alias anteriores
+        /// </summary>
+        /// <param name="device">Dispositivo a registrar</param> 
+        /// <returns>SuccessResponse</returns>            
+        public SuccessResponse AddUniqueAliasDevice (Device device)
+        {
+            
+            // verify the required parameter 'device' is set
+            if (device == null) throw new ApiException(400, "Missing required parameter 'device' when calling AddUniqueAliasDevice");
+            
+    
+            var path = "/devices/uniqueAlias";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = ApiClient.Serialize(device); // http body (model) parameter
+            
+    
+            // authentication setting, if any
+            String[] authSettings = new String[] { "khipu" };
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) ApiClient.CallApi(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
+    
+            if (((int)response.StatusCode) >= 400)
+                throw new ApiException ((int)response.StatusCode, "Error calling AddUniqueAliasDevice: " + response.Content, response.Content);
+            else if (((int)response.StatusCode) == 0)
+                throw new ApiException ((int)response.StatusCode, "Error calling AddUniqueAliasDevice: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return (SuccessResponse) ApiClient.Deserialize(response.Content, typeof(SuccessResponse), response.Headers);
+        }
+    
+        /// <summary>
+        /// Registro de dispositivo eliminando alias anteriores Registra un dispositivo identificado por su tokenId, elimina alias anteriores
+        /// </summary>
+        /// <param name="device">Dispositivo a registrar</param>
+        /// <returns>SuccessResponse</returns>
+        public async System.Threading.Tasks.Task<SuccessResponse> AddUniqueAliasDeviceAsync (Device device)
+        {
+            // verify the required parameter 'device' is set
+            if (device == null) throw new ApiException(400, "Missing required parameter 'device' when calling AddUniqueAliasDevice");
+            
+    
+            var path = "/devices/uniqueAlias";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = ApiClient.Serialize(device); // http body (model) parameter
+            
+    
+            // authentication setting, if any
+            String[] authSettings = new String[] { "khipu" };
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await ApiClient.CallApiAsync(path, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams, authSettings);
+            if (((int)response.StatusCode) >= 400)
+                throw new ApiException ((int)response.StatusCode, "Error calling AddUniqueAliasDevice: " + response.Content, response.Content);
 
             return (SuccessResponse) ApiClient.Deserialize(response.Content, typeof(SuccessResponse), response.Headers);
         }

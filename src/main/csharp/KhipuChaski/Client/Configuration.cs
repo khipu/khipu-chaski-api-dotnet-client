@@ -17,7 +17,7 @@ namespace KhipuChaski.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "1.1.0";
+        public const string Version = "1.1.1";
   
         /// <summary>
         /// Gets or sets the default API client for making HTTP calls.
@@ -102,8 +102,8 @@ namespace KhipuChaski.Client
                      .GetExecutingAssembly()
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
-            report += "    Version of the API: 1.1.0\n";
-            report += "    SDK Package Version: 1.1.0\n";
+            report += "    Version of the API: 1.1.1\n";
+            report += "    SDK Package Version: 1.1.1\n";
   
             return report;
         }
