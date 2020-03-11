@@ -4,7 +4,7 @@
         <RootNamespace>khipu_api_dotnet_client</RootNamespace>
         <AssemblyName>KhipuChaskiApiClient</AssemblyName>
         <OutputPath>bin\</OutputPath>
-        <PackageVersion></PackageVersion>
+        <PackageVersion>1.1.2</PackageVersion>
         <PackageLicenseUrl>https://raw.githubusercontent.com/khipu/khipu-api-dotnet-client/master/LICENSE</PackageLicenseUrl>
         <PackageProjectUrl>https://github.com/khipu/khipu-api-dotnet-client</PackageProjectUrl>
         <PackageIconUrl>http://www.gravatar.com/avatar/8e4e636a126998f9886580bfe51cb538.png</PackageIconUrl>
